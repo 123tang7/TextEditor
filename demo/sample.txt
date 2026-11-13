@@ -1,0 +1,24 @@
+Qt 简易文本编辑器 —— 功能演示文档
+
+一、实验目的
+本实验使用 Qt Creator 20.0.1 与 Qt 6.11.2 完成一个多窗口的简易文本编辑器，
+掌握 QMainWindow、Action 编辑器、QPlainTextEdit 以及文本文件读写的基本用法。
+
+二、主要功能
+1. 文件操作：新建、打开、保存、另存为，支持 UTF-8 与本地编码自动识别。
+2. 编辑操作：撤销、恢复、剪切、复制、粘贴、全选，Action 使能状态随编辑状态自动更新。
+3. 格式设置：字体、字号、字体颜色、背景颜色、自动换行。
+4. 视图控制：显示或隐藏工具栏、状态栏与行号栏。
+5. 查找替换：支持区分大小写、向上查找、循环查找、全部替换。
+6. 自动保存：文档被修改后每 30 秒自动写盘一次。
+
+三、界面说明
+菜单栏按照“文件、编辑、格式、查看、帮助”分组，工具栏同样按功能分成三组：
+文件工具栏负责文件读写，编辑工具栏负责编辑与查找替换，格式工具栏负责字体与显示设置。
+
+四、测试要点
+Qt 文本编辑器需要在真实编辑场景下检查完整性：未保存关闭时提示、异常文件处理、
+Action 使能状态、查找替换的边界情况。Qt 的 QPlainTextEdit 自带撤销栈，Qt 的
+QTextDocument 负责文本模型，Qt 的 QAction 负责菜单与工具栏的统一入口。
+
+This is a long line used to demonstrate the word wrap function of the editor: Qt Widgets provides QPlainTextEdit, QTextEdit and QTextDocument for rich text editing, and the line wrap mode decides whether the horizontal scrollbar appears.
